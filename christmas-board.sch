@@ -748,7 +748,7 @@ U 1 1 5BAA54A1
 P 13550 5950
 F 0 "SW2" H 13550 6235 50  0000 C CNN
 F 1 "SW_Push" H 13550 6144 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x01_P2.54mm_Vertical" H 13550 6150 50  0001 C CNN
+F 2 "christmas_board_footprint_lib:Tactile_Shallow_SW" H 13550 6150 50  0001 C CNN
 F 3 "" H 13550 6150 50  0001 C CNN
 	1    13550 5950
 	1    0    0    -1  
@@ -763,7 +763,7 @@ U 1 1 5BAAE2C6
 P 13550 5400
 F 0 "SW1" H 13550 5685 50  0000 C CNN
 F 1 "SW_Push" H 13550 5594 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x01_P2.54mm_Vertical" H 13550 5600 50  0001 C CNN
+F 2 "christmas_board_footprint_lib:Tactile_Shallow_SW" H 13550 5600 50  0001 C CNN
 F 3 "" H 13550 5600 50  0001 C CNN
 	1    13550 5400
 	1    0    0    -1  
@@ -1138,12 +1138,12 @@ LED_H
 $Comp
 L Connector:Conn_01x02_Female J1
 U 1 1 5BADD2F0
-P 12100 6450
-F 0 "J1" H 12127 6426 50  0000 L CNN
-F 1 "Conn_01x02_Female" H 12127 6335 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 12100 6450 50  0001 C CNN
-F 3 "~" H 12100 6450 50  0001 C CNN
-	1    12100 6450
+P 12950 6450
+F 0 "J1" H 12977 6426 50  0000 L CNN
+F 1 "Conn_01x02_Female" H 12977 6335 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 12950 6450 50  0001 C CNN
+F 3 "~" H 12950 6450 50  0001 C CNN
+	1    12950 6450
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1188,9 +1188,6 @@ F 3 "~" H 11850 6400 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	11850 6400 11850 6450
-Connection ~ 11850 6450
-Wire Wire Line
-	11850 6450 11900 6450
 $Comp
 L Device:CP C1
 U 1 1 5BAFA6E2
@@ -1247,7 +1244,7 @@ F 3 "~" H 11850 6550 50  0001 C CNN
 $EndComp
 Connection ~ 11850 6550
 Wire Wire Line
-	11850 6550 11900 6550
+	11850 6550 12750 6550
 $Comp
 L Device:Q_NPN_EBC Q1
 U 1 1 5BB15809
@@ -1303,4 +1300,25 @@ F 3 "~" H 9500 3500 50  0001 C CNN
 	1    9500 3500
 	1    0    0    -1  
 $EndComp
+$Comp
+L Switch:SW_SPDT SW3
+U 1 1 5BB23971
+P 12350 6300
+F 0 "SW3" H 12350 6585 50  0000 C CNN
+F 1 "SW_SPDT" H 12350 6494 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 12350 6300 50  0001 C CNN
+F 3 "" H 12350 6300 50  0001 C CNN
+	1    12350 6300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11850 6450 12150 6450
+Wire Wire Line
+	12150 6450 12150 6300
+Connection ~ 11850 6450
+Wire Wire Line
+	12550 6400 12550 6450
+Wire Wire Line
+	12550 6450 12750 6450
+NoConn ~ 12550 6200
 $EndSCHEMATC
